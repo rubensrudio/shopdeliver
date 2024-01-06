@@ -24,7 +24,6 @@ export class HeaderComponent {
 
   updateClienteName() {
     const tokenParsed = this.keycloakService.getKeycloakInstance().tokenParsed;
-    console.log(tokenParsed);
     this.clienteName = tokenParsed?.['preferred_username'] || 'Nome Padrão';
   }
 

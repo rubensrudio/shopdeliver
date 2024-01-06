@@ -1,9 +1,16 @@
+/* Seu arquivo de estilo CSS */
+
 .example-container {
-  height: 100%;
+  height: 100vh; /* Usar 100vh para ocupar a altura total da janela */
+}
+
+.drawer {
+  height: 100%; /* Ocupar a altura total do mat-drawer-container */
+  border: none; /* Remover a borda padrão do drawer */
 }
 
 mat-drawer-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch; /* Garantir que o conteúdo se estenda por toda a largura do mat-drawer-content */
 }

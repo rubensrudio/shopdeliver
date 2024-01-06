@@ -1,7 +1,10 @@
 <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
   <mat-drawer-container class="example-container">
     <mat-drawer #drawer mode="over">
-      I'm a drawer
+      <mat-nav-list>
+        <a mat-list-item routerLink="/" (click)="drawer.close()">Página Inicial</a>
+        <a mat-list-item routerLink="/about" (click)="drawer.close()">Outra Página</a>
+      </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>
       <router-outlet></router-outlet>
