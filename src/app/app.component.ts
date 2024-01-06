@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shopdeliver';
+
+  constructor(private readonly keycloak: KeycloakService) {}
+
+  login() {
+    this.keycloak.login();
+  }
+
+  logout() {
+    this.keycloak.logout();
+  }
+
+  isLoggedIn() {
+    return this.keycloak.isLoggedIn();
+  }
 }

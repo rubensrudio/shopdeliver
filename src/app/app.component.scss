@@ -1,0 +1,12 @@
+/* app.component.css */
+
+:host {
+    display: block;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
