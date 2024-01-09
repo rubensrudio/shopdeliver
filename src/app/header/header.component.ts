@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { KeycloakService, KeycloakEvent } from 'keycloak-angular';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { KeycloakService, KeycloakEvent } from 'keycloak-angular';
 })
 export class HeaderComponent {
   clienteName: string | undefined;
+
+  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
 
   constructor(private keycloakService: KeycloakService) {}
 
@@ -33,5 +36,19 @@ export class HeaderComponent {
 
   isLoggedIn() {
     return this.keycloakService.isLoggedIn();
+  }
+
+  openMenu() {
+    if (this.menuTrigger) {
+      this.menuTrigger.openMenu();
+    }
+  }
+
+  profile() {
+    // Lógica quando um item do menu é clicado
+  }
+
+  about() {
+    // Outra lógica de item de menu
   }
 }

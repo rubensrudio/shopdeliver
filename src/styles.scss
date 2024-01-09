@@ -15,3 +15,41 @@ body, html {
   
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-icon-button {
+  margin-left: 8px; /* Adicione espaçamento à esquerda do botão de logout */
+  font-size: 18px; /* Ajuste o tamanho do ícone */
+}
+
+/* Estilos para o botão do menu */
+.menu-button {
+  margin-right: 8px; /* Adicione espaçamento à direita do botão do menu */
+  font-size: 18px; /* Ajuste o tamanho do ícone */
+}
+
+.mat-menu-item {
+  background-color: #ffffff !important;
+  color: #007bff !important;
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mat-menu-item:hover {
+  background-color: #007bff !important;
+  color: #ffffff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,9 @@
-<button mat-raised-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+<mat-toolbar>
+  <button mat-raised-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
   <mat-drawer-container class="example-container">
     <mat-drawer #drawer mode="over">
       <mat-nav-list>

@@ -13,4 +13,5 @@ mat-drawer-content {
   display: flex;
   flex-direction: column;
   align-items: stretch; /* Garantir que o conteúdo se estenda por toda a largura do mat-drawer-content */
+  margin: 5px;
 }
