@@ -65,8 +65,4 @@ export class HeaderComponent {
   profile() {
     // Lógica quando um item do menu é clicado
   }
-
-  about() {
-    // Outra lógica de item de menu
-  }
 }

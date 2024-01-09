@@ -21,8 +21,8 @@
     </button>
     
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="profile()" *ngIf="lang">{{ lang.HEADER.PROFILE }}</button>
-      <button mat-menu-item (click)="about()" *ngIf="lang">{{ lang.HEADER.ABOUT }}</button>
+      <button mat-menu-item *ngIf="lang" routerLink="/profile">{{ lang.HEADER.PROFILE }}</button>
+      <button mat-menu-item *ngIf="lang" routerLink="/about">{{ lang.HEADER.ABOUT }}</button>
     </mat-menu>
 
     <button mat-icon-button (click)="logout()">

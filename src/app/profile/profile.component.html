@@ -1,0 +1,25 @@
+<!-- profile.component.html -->
+
+<div class="profile-container">
+    <h2>Perfil do Usuário</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+  
+      <mat-form-field class="form-group">
+        <mat-label for="fullName">Nome Completo:</mat-label>
+        <input matInput id="fullName" formControlName="fullName" required>
+      </mat-form-field>
+  
+      <mat-form-field class="form-group">
+        <mat-label for="username">Usuário:</mat-label>
+        <input matInput id="username" formControlName="username" required>
+      </mat-form-field>
+  
+      <mat-form-field class="form-group">
+        <mat-label for="password">Senha:</mat-label>
+        <input matInput id="password" formControlName="password" type="password" required>
+      </mat-form-field>
+  
+      <button mat-raised-button type="submit">Salvar</button>
+    </form>
+  </div>
+  
