@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  keycloakUrl: 'http://host.docker.internal:8080/auth'
+  keycloakUrl: 'http://host.docker.internal:8080/auth',
+  language: 'en'
 };
 
 /*

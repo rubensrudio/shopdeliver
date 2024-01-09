@@ -1,9 +1,12 @@
-<mat-toolbar>
-  <button mat-raised-button (click)="drawer.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
+<div style="height: 50px;">
+  <div style="float: left; margin: 5px;">
+    <button mat-raised-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</div>
 
+<div>
   <mat-drawer-container class="example-container">
     <mat-drawer #drawer mode="over">
       <mat-nav-list>
@@ -15,4 +18,4 @@
       <router-outlet></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container>
-  
+</div>

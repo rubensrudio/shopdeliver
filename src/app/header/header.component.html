@@ -2,19 +2,27 @@
 
 <mat-toolbar color="primary">
   <div style="float: left; width: 100%;">
-    <h1>Seu Título</h1>
+    <h1 *ngIf="lang">{{ lang.HEADER.TITLE }}</h1>
   </div>
 
   <div *ngIf="isLoggedIn()">
     <span class="clientName">{{ clienteName }} </span>
+
+    <mat-form-field style="margin-right: 5px; width: 50px;">
+      <mat-select [(value)]="selectedLang" (selectionChange)="changeLang($event)" >
+        <mat-option *ngFor="let lang of languages" [value]="lang.value">
+          {{lang.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     
     <button mat-icon-button [matMenuTriggerFor]="menu" style="margin-right: 5px;">
       <mat-icon class="menu-icon">more_vert</mat-icon>
     </button>
     
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="profile()">Perfil</button>
-      <button mat-menu-item (click)="about()">Sobre</button>
+      <button mat-menu-item (click)="profile()" *ngIf="lang">{{ lang.HEADER.PROFILE }}</button>
+      <button mat-menu-item (click)="about()" *ngIf="lang">{{ lang.HEADER.ABOUT }}</button>
     </mat-menu>
 
     <button mat-icon-button (click)="logout()">

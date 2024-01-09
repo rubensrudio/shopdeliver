@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { KeycloakService } from 'keycloak-angular';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,22 @@ import { KeycloakService } from 'keycloak-angular';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shopdeliver';
+  lang: any;
 
-  constructor(private readonly keycloak: KeycloakService) {}
+  constructor(
+    private readonly keycloak: KeycloakService,
+    private http: HttpClient
+  ) {}
+
+  ngOnInit(): void {
+    this.loadLang(environment.language);
+  }
+
+  loadLang(lang: string) {
+    this.http.get<any>('assets/language/'+lang+'.json').subscribe(response => {
+      this.lang = response;
+    });
+  }
 
   login() {
     this.keycloak.login();
@@ -21,5 +36,9 @@ export class AppComponent {
 
   isLoggedIn() {
     return this.keycloak.isLoggedIn();
+  }
+
+  changeLang(lang: string) {
+    this.loadLang(lang);
   }
 }
