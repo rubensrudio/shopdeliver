@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import {MatInputModule} from '@angular/material/input';
     MatSelectModule,
     MatMenuModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [
     {

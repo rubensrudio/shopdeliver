@@ -21,4 +21,12 @@ export class ProfileComponent {
     // Adicione a lógica para salvar os dados do perfil aqui
     console.log('Dados do perfil salvos:', this.profileForm.value);
   }
+
+  // profile.component.ts
+
+  goBack() {
+    // Adicione a lógica para voltar para a página anterior
+    console.log('Voltando...');
+  }
+
 }

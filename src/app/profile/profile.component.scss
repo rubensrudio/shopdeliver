@@ -21,7 +21,12 @@
   }
   
   /* Ajustando margem inferior do botão */
-  button {
-    margin-bottom: 16px;
-  }
+  /* profile.component.css */
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px; /* Adicionando margem superior para os botões */
+}
+
   
