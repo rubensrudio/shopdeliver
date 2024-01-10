@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { KeycloakService, KeycloakEvent } from 'keycloak-angular';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 interface languages {
   value: string;
@@ -25,7 +26,7 @@ export class HeaderComponent {
     {value: 'pt'}
   ];
 
-  constructor(private keycloakService: KeycloakService) {}
+  constructor(private keycloakService: KeycloakService, private route: Router) {}
 
   ngOnInit() {
     this.selectedLang = environment.language;
@@ -62,7 +63,7 @@ export class HeaderComponent {
     this.changeLanguage.emit(event.value);
   }
 
-  profile() {
-    // Lógica quando um item do menu é clicado
+  openProfile() {
+    this.route.navigate(['/profile', { data: this.lang }]);
   }
 }

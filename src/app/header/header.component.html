@@ -16,16 +16,16 @@
       </mat-select>
     </mat-form-field>
     
-    <button mat-icon-button [matMenuTriggerFor]="menu" style="margin-right: 5px;">
+    <button mat-icon-button [matMenuTriggerFor]="menu" style="margin-right: 5px;padding: 0px;">
       <mat-icon class="menu-icon">more_vert</mat-icon>
     </button>
     
     <mat-menu #menu="matMenu">
-      <button mat-menu-item *ngIf="lang" routerLink="/profile">{{ lang.HEADER.PROFILE }}</button>
+      <button mat-menu-item *ngIf="lang" (click)="openProfile()">{{ lang.HEADER.PROFILE }}</button>
       <button mat-menu-item *ngIf="lang" routerLink="/about">{{ lang.HEADER.ABOUT }}</button>
     </mat-menu>
 
-    <button mat-icon-button (click)="logout()">
+    <button mat-icon-button (click)="logout()" style="padding: 0px;">
       <mat-icon>exit_to_app</mat-icon>
     </button>
     

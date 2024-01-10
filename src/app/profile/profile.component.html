@@ -5,8 +5,13 @@
     <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
   
       <mat-form-field class="form-group">
-        <mat-label for="fullName">Nome Completo:</mat-label>
-        <input matInput id="fullName" formControlName="fullName" required>
+        <mat-label for="firstName">Nome:</mat-label>
+        <input matInput id="firstName" formControlName="firstName" required>
+      </mat-form-field>
+
+      <mat-form-field class="form-group">
+        <mat-label for="lastName">Sobrenome:</mat-label>
+        <input matInput id="lastName" formControlName="lastName" required>
       </mat-form-field>
   
       <mat-form-field class="form-group">
